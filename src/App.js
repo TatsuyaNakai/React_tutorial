@@ -42,10 +42,11 @@ function App() {
 
 	const jumpTo = (step) => {
 		setState({
+			...state,
+			// スプレッド構文で他のキーも含めてあげる必要がある。
 			stepNumber: step,
 			xIsNext: step % 2 === 0,
 		});
-		debugger;
 	};
 
 	const history = state.history;
